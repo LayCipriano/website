@@ -1,0 +1,101 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: max(700px, 82vw);
+}
+
+.about {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.about h1 {
+    font-family: var(--font-h1);
+    font-weight: var(--font-h1-weight);
+    font-size: 5rem;
+    letter-spacing: 4px;
+}
+
+.about h2 {
+    font-family: var(--font-h1);
+    font-weight: var(--font-h2-weight);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.about-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* cards */
+.about-card {
+    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(0, 0, 0, .25);
+    border-radius: 18px;
+    padding: 18px 20px;
+    cursor: default;
+
+    opacity: .55;
+    transform: translateY(0);
+    transition: opacity 220ms ease,
+        transform 220ms ease,
+        box-shadow 220ms ease,
+        border-color 220ms ease;
+}
+
+/* foco nos cards */
+.about-card:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, .18);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, .04),
+        0 0 22px rgba(168, 85, 247, .14);
+}
+
+/* titulo da section */
+.about-title {
+    font-size: .95rem;
+    letter-spacing: 3px;
+    opacity: .85;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: var(--font-h1);
+}
+
+/* texto da section */
+.about-text {
+    max-width: 500px;
+    font-size: 1rem;
+    line-height: 1.65;
+    opacity: .95;
+    font-family: var(--font-text);
+}
+
+/* tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    font-family: var(--font-text);
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255.10);
+    opacity: .55;
+    font-size: .95rem;
+    transition: opacity 180ms ease, transform 180ms ease, box-shadow 180ms ease;}
+
+.tech-tag:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(168, 85, 247, .18);
+}

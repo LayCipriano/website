@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sora:wght@100..800&display=swap');
+@import url('../assets/home.css');
+@import url('../assets/sobre.css');
+@import url('../assets/projetos.css');
+@import url('../assets/contato.css');
+@import url('../assets/blog.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-h1: 'Sora', sans-serif;
+  --font-text: 'JetBrains Mono', monospace;
+  --font-h1-weight: 200;
+  --font-h2-weight: 500;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* mata scroll durante transição */
+}
+
+.desktop-viewport {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 30%),
+    radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.08), transparent 30%),
+    #050505;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-h1-effect {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(255, 255, 255, 0.6),
+    0 0 24px rgba(168, 85, 247, 0.25);
+}
+
+.glow-h2-effect {
+  color: #f5f5f5;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.35);
+}
+
+.center {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  letter-spacing: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud-word {
+  position: absolute;
+  opacity: 0.2;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-out,
+    opacity 0.3s ease-out,
+    filter 0.3s ease-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.nav-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.nav-overlay .nav-arrow {
+  pointer-events: auto;
+}
+
+.nav-arrow {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  font-size: 2.2rem;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(255, 255, 255, 0.35),
+    0 0 20px rgba(168, 85, 247, 0.15);
+  color: #fff;
+}
+
+.nav-arrow:hover {
+  animation-play-state: paused;
+  opacity: 1;
+  filter: brightness(1.2);
+}
+
+.nav-arrow:hover::after {
+  transform: scale(1.08);
+}
+
+/* posições */
+.nav-left {
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: arrowLeftFloat 1.8s ease-in-out infinite;
+}
+
+.nav-right {
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: arrowRightFloat 1.8s ease-in-out infinite;
+}
+
+.nav-up {
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  animation: arrowUpDownFloat 1.8s ease-in-out infinite;
+}
+
+.nav-down {
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  animation: arrowUpDownFloat 1.8s ease-in-out infinite;
+}
+
+.nav-right {
+  top: 50%;
+  transform: translateY(-50%);
+  animation: arrowLeftFloat 1.8s ease-in-out infinite;
+}
+
+.nav-left {
+  top: 50%;
+  transform: translateY(-50%);
+  animation: arrowRightFloat 1.8s ease-in-out infinite reverse;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+}
+
+.panel.enter,
+.panel.exit {
+  transition:
+    transform 520ms cubic-bezier(.22, .61, .36, 1),
+    opacity 520ms cubic-bezier(.22, .61, .36, 1),
+    filter 520ms cubic-bezier(.22, .61, .36, 1);
+  will-change: transform, opacity, filter;
+}
+
+.panel.enter {
+  opacity: 0;
+  filter: blur(6px);
+}
+
+.enter-active {
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* saindo */
+.exit-left {
+  transform: translateX(45%) scale(0.98);
+  opacity: 0;
+  filter: blur(6px);
+}
+
+.exit-right {
+  transform: translateX(-45%) scale(0.98);
+  opacity: 0;
+  filter: blur(6px);
+}
+
+.exit-up {
+  transform: translateY(45%) scale(0.98);
+  opacity: 0;
+  filter: blur(6px);
+}
+
+.exit-down {
+  transform: translateY(-45%) scale(0.98);
+  opacity: 0;
+  filter: blur(6px);
+}
+
+/* entrando (posição inicial) */
+.enter-left {
+  transform: translateX(-45%) scale(0.98);
+}
+
+.enter-right {
+  transform: translateX(45%) scale(0.98);
+}
+
+.enter-up {
+  transform: translateY(-45%) scale(0.98);
+}
+
+.enter-down {
+  transform: translateY(45%) scale(0.98);
+}
+
+@keyframes arrowUpDownFloat {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+@keyframes arrowLeftFloat {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(-8px);
+  }
+}
+
+@keyframes arrowRightFloat {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(8px);
+  }
+}

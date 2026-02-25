@@ -1,0 +1,23 @@
+.container-content-blog {
+    max-width: 50%;
+}
+
+.center h1 {
+    font-family: var(--font-h1);
+    font-weight: var(--font-h1-weight);
+}
+
+.center h2 {
+    font-family: var(--font-text);
+    font-weight: var(--font-h2-weight);
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-text);
+}

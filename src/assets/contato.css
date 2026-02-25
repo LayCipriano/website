@@ -1,0 +1,128 @@
+.container-content-contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.page-contato .contato-shell {
+  width: min(900px, 92vw);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-contato .contato-card {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  background: rgba(0, 0, 0, .30);
+  padding: 22px;
+  position: relative;
+  box-shadow: 0 0 28px rgba(168, 85, 247, .10);
+}
+
+.page-contato .contato-texto {
+  opacity: .92;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  font-family: var(--font-text);
+}
+
+.page-contato .contato-info {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-contato .contato-email {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.page-contato .label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .75rem;
+  opacity: .65;
+  font-family: var(--font-h1);
+}
+
+.page-contato .valor {
+  opacity: .88;
+  letter-spacing: .3px;
+  font-family: var(--font-text);
+}
+
+.page-contato .contato-acoes {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.page-contato .btn-contato {
+  border: 1px solid rgba(255, 255, 255, .14);
+  background: rgba(255, 255, 255, .04);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: .9;
+  transition: opacity 180ms ease, box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
+  font-family: var(--font-h1);
+}
+
+.page-contato .btn-contato:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, .20);
+  box-shadow: 0 0 18px rgba(255, 255, 255, .10), 0 0 18px rgba(168, 85, 247, .12);
+}
+
+.page-contato .btn-sec {
+  opacity: .75;
+}
+
+.page-contato .contato-selo {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .03);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  letter-spacing: 1px;
+  font-size: .85rem;
+  pointer-events: none;
+}
+
+.page-contato .contato-selo.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-contato .contato-rodape {
+  opacity: .65;
+  font-size: .95rem;
+  text-align: center;
+  font-family: var(--font-text);
+}
+
+.page-contato .center h1 {
+  font-family: var(--font-h1);
+  font-weight: var(--font-h1-weight);
+  font-size: 5rem;
+}
